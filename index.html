@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello WebSocket</title>
+    <link href="webjars/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <script src="webjars/jquery.min.js"></script>
+    <script src="webjars/sockjs.min.js"></script>
+    <script src="webjars/stomp.min.js"></script>
+</head>
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div id="main-content" class="container">
+    <div class="row">
+		<div class="width100">
+		<div id="headerSection">
+			<div class="userNameWelcome">Welcome, <span id="userName">Kubilay Akca</span></div>
+			<div id="seperator"></div>
+		</div>
+		<br/>
+		<div class="col col-md-12">
+			<div class="col col-md-6">
+			
+				<div id="dateTime"> </div>
+				<span id="weatherLocationAndTempature">İstanbul, 0 °C</span>
+				<span id="weatherIconContainer"></span>
+				<span id="weatherDescription"></span>
+				
+				<table class="table" id="notificationTable">
+					<tbody>
+						<tr>
+							<td><img src="img/email_icon.png" class="notificationIcon"> <span class="notificationCircle">2</span> New Email</td>
+						</tr>
+						<tr>
+							<td><img src="img/message_icon.png" class="notificationIcon"> <span class="notificationCircle">14</span> New Message</td>
+						</tr>
+						<tr>
+							<td><img src="img/check_icon.png" class="notificationIcon">Complete online check-in</td>
+						</tr>
+						<tr>
+							<td><img src="img/check_icon.png" class="notificationIcon">Send email to supervisor</td>
+						</tr>
+						<tr>
+							<td><img src="img/check_icon.png" class="notificationIcon">Buy some milk</td>
+						</tr>
+						<tr>
+							<td><img src="img/check_icon.png" class="notificationIcon">Your Tesla has low battery</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col col-md-6 rightBox">
+				<table class="table">
+					<tbody>
+						<tr>
+							<td>
+								<span id="bitcoinPercent"></span>
+								<span class="coinPrice" id="bitcoin"></span>$ 
+								<img src="img/bitcoin_icon.png" class="coinIcon">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span id="ripplePercent"></span>
+								<span class="coinPrice" id="ripple"></span>$ 
+								<img src="img/ripple_icon.png" class="coinIcon">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span id="ethereumPercent"></span>
+								<span class="coinPrice" id="ethereum"></span>$ 
+								<img src="img/ethereum_icon.png" class="coinIcon">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span id="litecoinPercent"></span>
+								<span class="coinPrice" id="litecoin"></span>$ 
+								<img src="img/litecoin_icon.png" class="coinIcon">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row footer">
+		<div class="col-md-12">
+			<span id="websocketStatus">Trying to connect to WebSocket...</span>
+		</div>
+</div>
+</div>
+
+<script src="app.js"></script>
+
+<!--
+	<div class="row footer">
+		<div class="col-md-12">
+			<form class="form-inline">
+				<div class="form-group">
+					<label for="connect">WebSocket connection:</label>
+					<button id="connect" class="btn btn-default" type="submit">Connect</button>
+					<button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Disconnect
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	-->
+</body>
+</html>
